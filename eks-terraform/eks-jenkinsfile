@@ -57,15 +57,14 @@ pipeline {
             }
         }
 
-      /*  stage('Terraform destroy') {
+      stage('Terraform destroy') {
             when {
                 expression { params.ACTION == 'destroy' }
             }
             steps {
                 dir('eks-terraform') {
-                 //   sh 'terraform destroy -auto-approve'
+                    sh 'terraform destroy -auto-approve'
                 }
-*/
             }
         }
     }
