@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM python:3.10.8-slim@sha256:abf96998af340975c26177b900c10cfb40716c985325303c063736f0f5cf3171 as base
+FROM python:3.11-slim@sha256:ae952e0a57138a4317b9b61caaa19a8217c2f356803f8d7e63aad08769950937 as base
 
 FROM base as builder
 
@@ -33,7 +33,7 @@ ENV PYTHONUNBUFFERED=1
 WORKDIR /recommendationservice
 
 # Grab packages from builder
-COPY --from=builder /usr/local/lib/python3.10/ /usr/local/lib/python3.10/
+COPY --from=builder /usr/local/lib/python3.11/ /usr/local/lib/python3.11/
 
 # Add the application
 COPY . .
