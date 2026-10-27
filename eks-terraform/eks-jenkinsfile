@@ -63,7 +63,7 @@ pipeline {
             }
             steps {
                 dir('eks-terraform') {
-                    sh 'terraform destroy -auto-approve'
+                 //   sh 'terraform destroy -auto-approve'
                 }
             }
         }
